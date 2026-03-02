@@ -1,0 +1,80 @@
+================================================================================
+FEATURE DETECTION COMPARISON REPORT - CLUTTERED_BACKGROUNDS
+================================================================================
+
+SUMMARY STATISTICS
+--------------------------------------------------------------------------------
+
+SIFT:
+  Number of Matches: 752.56 ± 353.88
+  Matching Efficiency: 36.89% ± 6.28%
+  Avg Match Distance: 240.4020 ± 38.8368
+  Spatial Entropy (Img1): 5.6251 ± 0.2436
+  Spatial Entropy (Img2): 5.6647 ± 0.1600
+  Detection Time: 0.1171s ± 0.0181s
+  Matching Time: 0.0529s ± 0.0392s
+
+SuperPoint:
+  Number of Matches: 843.40 ± 159.78
+  Matching Efficiency: 34.28% ± 6.32%
+  Avg Match Distance: 0.7221 ± 0.1011
+  Spatial Entropy (Img1): 5.9891 ± 0.0069
+  Spatial Entropy (Img2): 5.9884 ± 0.0061
+  Detection Time: 0.6738s ± 0.0292s
+  Matching Time: 0.1150s ± 0.0068s
+
+D2-Net:
+  Number of Matches: 328.20 ± 164.21
+  Matching Efficiency: 16.41% ± 8.21%
+  Avg Match Distance: 0.0021 ± 0.0003
+  Spatial Entropy (Img1): 5.9868 ± 0.0052
+  Spatial Entropy (Img2): 5.9876 ± 0.0030
+  Detection Time: 1.3476s ± 0.0324s
+  Matching Time: 0.1565s ± 0.0050s
+
+STATISTICAL COMPARISONS
+--------------------------------------------------------------------------------
+
+Metric: matching_efficiency
+  SIFT_vs_SuperPoint:
+    p-value: 0.1579
+    Significant: False
+    Mean difference: 2.6098
+  SIFT_vs_D2-Net:
+    p-value: 0.0000
+    Significant: True
+    Mean difference: 20.4752
+  SuperPoint_vs_D2-Net:
+    p-value: 0.0000
+    Significant: True
+    Mean difference: 17.8653
+
+Metric: avg_matching_distance
+  SIFT_vs_SuperPoint:
+    p-value: 0.0000
+    Significant: True
+    Mean difference: 239.6800
+  SIFT_vs_D2-Net:
+    p-value: 0.0000
+    Significant: True
+    Mean difference: 240.4000
+  SuperPoint_vs_D2-Net:
+    p-value: 0.0000
+    Significant: True
+    Mean difference: 0.7200
+
+Metric: num_matches
+  SIFT_vs_SuperPoint:
+    p-value: 0.2574
+    Significant: False
+    Mean difference: -90.8400
+  SIFT_vs_D2-Net:
+    p-value: 0.0000
+    Significant: True
+    Mean difference: 424.3600
+  SuperPoint_vs_D2-Net:
+    p-value: 0.0000
+    Significant: True
+    Mean difference: 515.2000
+
+================================================================================
